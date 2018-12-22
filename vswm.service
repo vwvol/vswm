@@ -1,0 +1,9 @@
+[Unit]
+After=networking.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/vswm
+
+[Install]
+WantedBy=networking.target

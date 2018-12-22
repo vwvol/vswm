@@ -53,7 +53,7 @@ def connect_wpa(dev, ssid, psk, ap):
     if (None != ap):
         os.system("sed -i 's/.*ssid.*/        bssid=%s/g' /etc/wpa_supplicant/wpa_supplicant.conf" % (ap))
 
-    os.system("wpa_supplicant -d -Dwext  -i " + dev + " -c /etc/wpa_supplicant/wpa_supplicant.conf >& /var/tmp/wpa_supplicant.log &")
+    os.system("wpa_supplicant -d -Dwext  -i " + dev + " -c /etc/wpa_supplicant/wpa_supplicant.conf > /var/tmp/wpa_supplicant.log &")
     os.system("sleep 5")
 
 def set_dns(dnsSection):

@@ -3,7 +3,7 @@ After=networking.target
 
 [Service]
 Type=forking
-ExecStart=/usr/local/bin/vswm
+ExecStart=/usr/bin/python3 /usr/local/bin/vswm
 
 [Install]
 WantedBy=networking.target
